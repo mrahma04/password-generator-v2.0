@@ -38,9 +38,15 @@ THEN the password is either displayed in an alert or written to the page
 ### Step-by-step instructions/screenshots
 
 ![](./assets/img/2022-04-22-07-18-44.png)
-![](./assets/img/2022-04-22-07-19-02.png)
-![](./assets/img/2022-04-22-07-19-18.png)
-![](./assets/img/2022-04-22-07-19-29.png)
-![](./assets/img/2022-04-22-07-19-45.png)
-![](./assets/img/2022-04-22-07-19-57.png)
-![](./assets/img/2022-04-22-07-20-12.png)
+
+![](./assets/img/2022-04-22-07-33-34.png)
+
+![](./assets/img/2022-04-22-07-33-54.png)
+
+![](./assets/img/2022-04-22-07-34-08.png)
+
+![](./assets/img/2022-04-22-07-34-35.png)
+
+![](./assets/img/2022-04-22-07-35-19.png)
+
+![](./assets/img/2022-04-22-07-41-01.png)
