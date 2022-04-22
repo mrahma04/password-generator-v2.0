@@ -4,7 +4,7 @@
 
 ### To use this Application
 
-- [Go to live link](https://whispering-depths-44425.herokuapp.com/)
+- [Go to live link](https://mrahma04.github.io/password-generator-v2.0/)
 - Click 'Generate Password' to get started
 - Answer questions in Window Prompts
 
