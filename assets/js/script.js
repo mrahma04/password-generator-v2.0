@@ -91,10 +91,8 @@ function getPassCriteria() {
 }
 
 function getPassLength() {
-  window.alert(`You'll be prompted with a series of questions before generating your new password. Click 'Ok' for 'YES' and 'Cancel' for 'NO'.`)
   var length = window.prompt('Enter password length (8 - 128 characters):')
-  if (length > 8 && length < 128) {
-    window.alert(`Your new password is ${length} characters long`)
+  if (length >= 8 && length < 128) {
     return length
   } else {
     window.alert('Password length not valid. Please try again!')
@@ -102,14 +100,25 @@ function getPassLength() {
   }
 }
 
+function getRandomInt() {
+  // creates an 'empty' array with 32-bit elements
+  var byteArray = new Uint32Array(1) // 1 element initialized to 0
+  var randomInt = window.crypto.getRandomValues(byteArray)
+  // divide the random integer by the max value of Uint8 which is 2 ^ 32 - 1
+  var randomIntDecimal = randomInt / (Math.pow(2, 32) - 1)
+  console.log('Cryptographically strong random number -->', randomIntDecimal)
+  return randomIntDecimal
+}
+
 function generatePassword() {
   // var includedCharsArr = getPassCriteria().flat()
+  window.alert(`You'll be prompted with a series of questions before generating your new password. Click 'Ok' for 'YES' and 'Cancel' for 'NO'.`)
   var passLength = getPassLength()
   getPassCriteria()
   var includedCharsArr = includedChars.flat()
   var randomPassword = ""
   for (let i = 0; i < passLength; i++) {
-    var randomChar = includedCharsArr[Math.floor(Math.random() * includedCharsArr.length)]
+    var randomChar = includedCharsArr[Math.floor(getRandomInt() * includedCharsArr.length)]
     randomPassword += randomChar
   }
   return randomPassword

@@ -5,8 +5,8 @@
 ### To use this Application
 
 - [Go to live link](https://whispering-depths-44425.herokuapp.com/)
-- Sign up using email address, username and password
-- Log in using your username and password
+- Click 'Generate Password' to get started
+- Answer questions in Window Prompts
 
 ### User Story
 
