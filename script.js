@@ -58,18 +58,20 @@ var uppercaseCharsArr = [
   'Z'
 ]
 
-function getParameters() {
-  var includedChars = []
-  var specChars = window.confirm('Would you like to include SPECIAL CHARACTERS?')
-  var numChars = window.confirm('Would you like to include NUMBERS?')
-  var lowerCaseChars = window.confirm('Would you like to include LOWER CASE CHARACTERS?')
-  var upperCaseChars = window.confirm('Would you like to include UPPER CASE CHARACTERS?')
+var includedChars = []
+
+function getPassCriteria() {
+  // var includedChars = []
+  var specChars = window.confirm('Would you like to include special characters?')
+  var numChars = window.confirm('Would you like to include numbers [0-9]?')
+  var lowerCaseChars = window.confirm('Would you like to include lower case characters [a-z]?')
+  var upperCaseChars = window.confirm('Would you like to include upper case characters [A-Z]?')
 
   if (specChars) {
     includedChars.push(specCharsArr)
   }
   if (numChars) {
-    includedChars.push(specCharsArr)
+    includedChars.push(numCharsArr)
   }
   if (lowerCaseChars) {
     includedChars.push(lowercaseCharsArr)
@@ -77,20 +79,37 @@ function getParameters() {
   if (upperCaseChars) {
     includedChars.push(uppercaseCharsArr)
   }
-  return (includedChars.flat())
+  // if (!specChars && !numChars && !lowerCaseChars && !upperCaseChars) {
+  //   window.alert(`Booo! You didn't select any character types. Please try again!`)
+  //   getPassCriteria()
+  // }
+  if (includedChars.length < 1) {
+    window.alert(`Booo!! Please select at least 1 character type`)
+    getPassCriteria()
+  }
+  // return includedChars
 }
 
-function passwordLen() {
+function getPassLength() {
+  window.alert(`You'll be prompted with a series of questions before generating your new password. Click 'Ok' for 'YES' and 'Cancel' for 'NO'.`)
   var length = window.prompt('Enter password length (8 - 128 characters):')
-  return length
+  if (length > 8 && length < 128) {
+    window.alert(`Your new password is ${length} characters long`)
+    return length
+  } else {
+    window.alert('Password length not valid. Please try again!')
+    return getPassLength()
+  }
 }
 
 function generatePassword() {
-  var includedCharsA = getParameters()
-  var passLen = passwordLen()
+  // var includedCharsArr = getPassCriteria().flat()
+  var passLength = getPassLength()
+  getPassCriteria()
+  var includedCharsArr = includedChars.flat()
   var randomPassword = ""
-  for (let i = 0; i < passLen; i++) {
-    var randomChar = includedCharsA[Math.floor(Math.random() * includedCharsA.length)]
+  for (let i = 0; i < passLength; i++) {
+    var randomChar = includedCharsArr[Math.floor(Math.random() * includedCharsArr.length)]
     randomPassword += randomChar
   }
   return randomPassword

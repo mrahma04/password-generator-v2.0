@@ -1,6 +1,6 @@
 # Password Generator v2.0 :lock::jack_o_lantern:
 
-#### This is a cryptographically-secure random password generator. 
+#### Password generator is a Web Application that will create a new password matching the selected criteria. It uses the Crypto.getRandomValues() method that generates cryptographically strong random values. [See Reference](https://developer.mozilla.org/en-US/docs/Web/API/Crypto/getRandomValues)
 
 ### To use this Application
 
