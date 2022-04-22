@@ -35,3 +35,11 @@ THEN a password is generated that matches the selected criteria
 WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 ```
+
+![](./assets/img/2022-04-22-07-18-44.png)
+![](./assets/img/2022-04-22-07-19-02.png)
+![](./assets/img/2022-04-22-07-19-18.png)
+![](./assets/img/2022-04-22-07-19-29.png)
+![](./assets/img/2022-04-22-07-19-45.png)
+![](./assets/img/2022-04-22-07-19-57.png)
+![](./assets/img/2022-04-22-07-20-12.png)
