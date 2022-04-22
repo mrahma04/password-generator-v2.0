@@ -45,8 +45,8 @@ THEN the password is either displayed in an alert or written to the page
 
 ![](./assets/img/2022-04-22-07-34-08.png)
 
-![](./assets/img/2022-04-22-07-34-35.png)
+![](./assets/img/2022-04-22-07-43-17.png)
 
-![](./assets/img/2022-04-22-07-35-19.png)
+![](./assets/img/2022-04-22-07-34-35.png)
 
 ![](./assets/img/2022-04-22-07-41-01.png)
