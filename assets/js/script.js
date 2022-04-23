@@ -67,17 +67,23 @@ function getPassCriteria() {
   var lowerCaseChars = window.confirm('Would you like to include lower case characters [a-z]?')
   var upperCaseChars = window.confirm('Would you like to include upper case characters [A-Z]?')
 
+  var categories = []
+
   if (specChars) {
     includedChars.push(specCharsArr)
+    categories.push('Special Characters')
   }
   if (numChars) {
     includedChars.push(numCharsArr)
+    categories.push('Numbers')
   }
   if (lowerCaseChars) {
     includedChars.push(lowercaseCharsArr)
+    categories.push('Lower Case Characters')
   }
   if (upperCaseChars) {
     includedChars.push(uppercaseCharsArr)
+    categories.push('Upper Case Characters')
   }
   // if (!specChars && !numChars && !lowerCaseChars && !upperCaseChars) {
   //   window.alert(`Booo! You didn't select any character types. Please try again!`)
@@ -87,6 +93,7 @@ function getPassCriteria() {
     window.alert(`Booo!! Please select at least 1 character type`)
     getPassCriteria()
   }
+  window.alert(`Your password will include - ${categories.join(', ')}`)
   // return includedChars
 }
 
