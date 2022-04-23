@@ -112,7 +112,7 @@ function getRandomInt() {
 
 function generatePassword() {
   // var includedCharsArr = getPassCriteria().flat()
-  window.alert(`You'll be prompted with a series of questions before generating your new password. Click 'Ok' for 'YES' and 'Cancel' for 'NO'.`)
+  window.alert(`You'll be prompted with a series of questions before generating your new password. Select at least ONE character type. Click 'Ok' for 'YES' and 'Cancel' for 'NO'.`)
   var passLength = getPassLength()
   getPassCriteria()
   var includedCharsArr = includedChars.flat()
