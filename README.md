@@ -5,6 +5,7 @@
 ### To use this Application
 
 - [Go to live link](https://mrahma04.github.io/password-generator-v2.0/)
+- [See Walkthrough Video](https://drive.google.com/file/d/11yY_L55RC6Qwxnuf2ciW7ZzEFpuA5PA0/view)
 - Click 'Generate Password' to get started
 - Answer questions in Window Prompts
 
