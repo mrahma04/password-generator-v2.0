@@ -92,8 +92,9 @@ function getPassCriteria() {
   if (includedChars.length < 1) {
     window.alert(`Booo!! Please select at least 1 character type`)
     getPassCriteria()
+  } else {
+    window.alert(`Your password will include - ${categories.join(', ')}`)
   }
-  window.alert(`Your password will include - ${categories.join(', ')}`)
   // return includedChars
 }
 
